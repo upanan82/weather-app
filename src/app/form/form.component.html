@@ -1,0 +1,9 @@
+<nav>
+  <input [(ngModel)]="city">
+  <a href="/city/{{city}}">Get Weather</a>
+  <select #option (change)="getInterval(option.value)">
+    <option *ngFor="let el of intervals" value="{{el}}">{{el}}</option>
+  </select>
+  <span> sec.</span>
+</nav>
+<app-api [data]="data"></app-api>

@@ -1,0 +1,10 @@
+<div *ngIf="data === null" class="error">
+  <h2>City Not Found!</h2>
+</div>
+<div *ngIf="data">
+  <h2>Weather in {{data.name}}</h2>
+  <div class="temp">
+    <img src="{{data.img}}" title="{{data.title}}">
+    <h2>{{data.temp}} °C</h2>
+  </div>
+</div>

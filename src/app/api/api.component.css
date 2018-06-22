@@ -1,0 +1,23 @@
+/* ApiComponent's private CSS styles */
+
+h2 {
+    margin-bottom: 0;
+}
+
+.error {
+    color: #dd0000;
+}
+
+.temp {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.temp h2 {
+    padding-left: 5px;
+    margin: 0;
+}
