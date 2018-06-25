@@ -6,7 +6,7 @@ branches:
   only:
     - master
     
-dist: trusty
+sudo: required
 
 addons:
   chrome: stable
