@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { FormComponent } from './form.component';
 import { ApiModule } from '../api/api.module';
+import { AppService } from '../app.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,9 @@ import { ApiModule } from '../api/api.module';
   ],
   exports: [
     FormComponent
+  ],
+  providers: [
+    AppService
   ]
 })
 export class FormModule { }
