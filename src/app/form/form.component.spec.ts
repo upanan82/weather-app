@@ -12,7 +12,10 @@ describe('FormComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ FormComponent, ApiComponent ],
-      imports: [ FormsModule, AppService ]
+      imports: [ FormsModule ],
+      providers: [
+        {provide: AppService }
+      ]
     })
     .compileComponents();
   }));
