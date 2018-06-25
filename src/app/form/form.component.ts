@@ -7,7 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
+  providers: [ AppService ]
 })
 export class FormComponent implements OnInit {
 
