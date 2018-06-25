@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
 import { Weather } from '../weather';
 import { AppService } from '../app.service';
 import { ActivatedRoute } from '@angular/router';
