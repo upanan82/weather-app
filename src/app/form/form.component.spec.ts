@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormComponent } from './form.component';
 import { ApiComponent } from '../api/api.component';
 import { FormsModule } from '@angular/forms';
-import { AppService } from '../app.service';
 
 describe('FormComponent', () => {
   let component: FormComponent;
@@ -12,8 +11,7 @@ describe('FormComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ FormComponent, ApiComponent ],
-      imports: [ FormsModule ],
-      providers: [ AppService ]
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
