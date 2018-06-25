@@ -8,10 +8,11 @@ branches:
 
 before_script:
   - npm install -g @angular/cli
-  - google-chrome-stable --headless --no-sandbox --remote-debugging-port=9222 http://localhost:80 # or some such
-
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+  
 addons:
-  - chrome # or google-chrome-stable
+   chrome: stable
 
 script:
     - ng build
