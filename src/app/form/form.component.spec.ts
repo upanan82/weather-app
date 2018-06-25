@@ -13,9 +13,7 @@ describe('FormComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ FormComponent, ApiComponent ],
       imports: [ FormsModule ],
-      providers: [
-        {provide: AppService }
-      ]
+      providers: [ AppService ]
     })
     .compileComponents();
   }));

@@ -6,6 +6,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormModule } from './form/form.module';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { FormModule } from './form/form.module';
     AppRoutingModule,
     FormModule
   ],
-  providers: [],
+  providers: [ AppService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
