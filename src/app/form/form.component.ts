@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Weather } from '../weather';
+import { Weather } from '../models/weather';
 import { AppService } from '../app.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
+  providers: []
 })
 export class FormComponent implements OnInit {
 

@@ -1,25 +1,39 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Observable, of } from 'rxjs';
 
 import { FormComponent } from './form.component';
-import { ApiComponent } from '../api/api.component';
-import { FormsModule } from '@angular/forms';
+import { WeatherComponent } from '../weather/weather.component';
+import { AppService } from '../app.service';
+
+class MockAppService extends AppService {
+  getApiData(city: string): Observable<any> {
+    return of(city as string);
+  }
+}
 
 describe('FormComponent', () => {
   let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+  let service: MockAppService;
+  const http: HttpClient = null;
+  const route: ActivatedRoute = null;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormComponent, ApiComponent ],
-      imports: [ FormsModule ]
+      declarations: [
+        FormComponent,
+        WeatherComponent
+      ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    service = new MockAppService(http);
+    component = new FormComponent(service, route);
   });
 
   it('should create', () => {

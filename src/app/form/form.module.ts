@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { FormComponent } from './form.component';
-import { ApiModule } from '../api/api.module';
+import { WeatherComponent } from '../weather/weather.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ApiModule
+    HttpClientModule
   ],
   declarations: [
-    FormComponent
+    FormComponent,
+    WeatherComponent
   ],
   exports: [
     FormComponent
-  ]
+  ],
+  providers: []
 })
 export class FormModule { }

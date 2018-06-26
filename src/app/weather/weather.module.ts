@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ApiComponent } from './api.component';
+import { WeatherComponent } from './weather.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    ApiComponent
+    WeatherComponent
   ],
   exports: [
-    ApiComponent
+    WeatherComponent
   ]
 })
-export class ApiModule { }
+export class WeatherModule { }

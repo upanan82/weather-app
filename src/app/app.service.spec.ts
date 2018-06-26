@@ -6,8 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 describe('AppService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AppService],
-      imports: [ HttpClientModule ]
+      providers: [AppService ],
+      imports: [HttpClientModule]
     });
   });
 
