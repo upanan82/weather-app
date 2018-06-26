@@ -17,5 +17,5 @@ before_script:
 
 script:
     - ng build
-    - ng test
+    - ng test --watch false
     - ng e2e
